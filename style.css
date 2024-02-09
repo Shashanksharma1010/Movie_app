@@ -1,0 +1,142 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(28, 28, 28);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    width:100%;
+    padding:2rem;
+}
+
+.searchbar {
+    width: 50%;
+
+    background-color: #fff;
+    color:black;
+    font-size: larger;
+
+    border:2px solid blueviolet;
+    padding:1rem;
+    border-radius: 50px;
+    transition: all ease 0.5s;
+}
+
+.search button {
+    background-color: rgb(16, 155, 174);
+    color:#fff;
+    position: absolute;
+    right:26%;
+    border: none;
+    border-radius: 50px;
+    padding:1.1rem;
+    font-size: larger;
+    width:10%;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .search button {
+        width: 25%;
+        right:5%;
+    }
+
+    .searchbar {
+      width: 100%;
+    }
+  }
+
+.searchbar:focus {
+    outline: none;
+    border:2px solid rgb(43, 177, 226);
+}
+
+.movie {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap:15px;
+    padding:2rem; 
+}
+
+.movie-card {
+    position: relative;
+    width:350px;
+    border-radius: 10px;
+    margin-bottom:2rem;
+    background-color: rgb(40, 40, 40);
+    color:whitesmoke;
+    text-align: center;
+    cursor: pointer;
+
+    -webkit-box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.75);
+
+    animation-name: opac;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-duration: 2.5s;
+}
+
+@keyframes opac {
+    from { opacity: 0;}
+    to {opacity: 1;}
+}
+
+.movie-img {
+    width: 100%;
+}
+
+.description-title {
+    display: block;
+    padding: 20px;
+}
+
+.description-rating {
+    float:right;
+    background-color: rgb(16, 155, 174);
+    padding:5px;
+    font-size:medium;
+    border-radius: 5px;
+}
+
+.description-text {
+    display:none;
+    position:absolute;
+    bottom:0;
+    width: 100%;
+    height: 50%;
+    font-size: medium;
+    border: 1px solid #fff;
+    background: rgb(138,43,226);
+    background: linear-gradient(90deg, rgba(138,43,226,1) 35%, rgba(0,212,255,1) 100%);
+    color:#fff;
+    border-radius: 5px;
+    padding:2rem;
+    animation-name: grow;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+}
+
+.movie-card:hover .description-text {
+    display: block;
+}
+
+@keyframes grow {
+    from {
+        height: 40%;
+    }
+    to {
+        height: 50%;
+    }
+  }
