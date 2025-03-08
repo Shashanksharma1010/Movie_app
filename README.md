@@ -7,7 +7,7 @@ A **Movie Application** built using **api.themoviedb.org API** to display popula
 - Fetch and display **Popular Movies** from the MovieDB API
 - **Search Movies** by title with dynamic API calls
 - Asynchronous API Call Handling
-- Movie Card Creation using `forEach` Loop
+- Movie Card Creation
 - Input Validation for Search Queries
 - Responsive Design
 
@@ -21,7 +21,7 @@ A **Movie Application** built using **api.themoviedb.org API** to display popula
 ## 📌 Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/movie-app.git
+   git clone https://github.com/Shashanksharma1010/Movie_app.git
    ```
 2. Navigate to the project directory:
    ```bash
